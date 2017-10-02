@@ -28,14 +28,14 @@
     <div class="card card-register mx-auto mt-5">
       <div class="card-header">Register an Account</div>
       <div class="card-body">
-        <form>
+        <form action="/RegisterAction" method="post">
           <div class="form-group">
             <label for="exampleInputName">Name</label>
             <input class="form-control" id="exampleInputName" name="name" type="text" aria-describedby="nameHelp" placeholder="Enter name">
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input class="form-control" id="exampleInputEmail1" name="name" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <input class="form-control" id="exampleInputEmail1" name="email" type="email" aria-describedby="emailHelp" placeholder="Enter email">
           </div>
           <div class="form-group">
             <div class="form-row">
@@ -51,7 +51,7 @@
           </div>
           
           <input class="btn btn-primary btn-block" type="submit" name="submit" value="Register"/>
-          <input class="btn btn-primary btn-block" type="submit" name="submit" value="Register"/>
+
         </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="login.jsp">Login Page</a>

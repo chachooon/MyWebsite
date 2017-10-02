@@ -14,10 +14,10 @@
 <title>차정윤 :: Post</title>
 
 <!-- Bootstrap core CSS -->
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom fonts for this template -->
-<link href="vendor/font-awesome/css/font-awesome.min.css"
+<link href="/vendor/font-awesome/css/font-awesome.min.css"
 	rel="stylesheet" type="text/css">
 <link
 	href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic'
@@ -27,18 +27,18 @@
 	rel='stylesheet' type='text/css'>
 
 <!-- Custom styles for this template -->
-<link href="css/clean-blog.min.css" rel="stylesheet">
+<link href="/css/clean-blog.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 
 	<!-- Navigation -->
-	<%@ include file="nav.jspf"%>
+	<%@ include file="/nav.jspf"%>
 
 	<!-- Page Header -->
 	<header class="masthead"
-		style="background-image: url('img/post-bg.jpg')">
+		style="background-image: url('/img/post-bg.jpg')">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-md-10 mx-auto">
@@ -117,7 +117,7 @@
 					man.</p>
 
 				<a href="#"> <img class="img-fluid"
-					src="img/post-sample-image.jpg" alt="">
+					src="/img/post-sample-image.jpg" alt="">
 				</a> <span class="caption text-muted">To go places and do things
 					that have never been done before – that’s what living is all about.</span>
 
@@ -144,14 +144,14 @@
 	<hr>
 
 	<!-- Footer -->
-	<%@ include file="footer.jspf"%>
+	<%@ include file="/footer.jspf"%>
 	<!-- Bootstrap core JavaScript -->
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor/popper/popper.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/vendor/jquery/jquery.min.js"></script>
+	<script src="/vendor/popper/popper.min.js"></script>
+	<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 
 	<!-- Custom scripts for this template -->
-	<script src="js/clean-blog.min.js"></script>
+	<script src="/js/clean-blog.min.js"></script>
 
 </body>
 

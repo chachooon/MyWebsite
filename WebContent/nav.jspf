@@ -1,40 +1,51 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import ="java.io.IOException" %>
-<%@ page import = "java.net.URLEncoder" %>
-<% 	String id="", pwd="", error="";
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="java.io.IOException"%>
+<%@ page import="java.net.URLEncoder"%>
+<%
+	String id = "", pwd = "", error = "";
 	String target = request.getParameter("target");
 	String remember = request.getParameter("remember");
 	String keepLogin = request.getParameter("keepLogin");
-	session = request.getSession(); 
+	session = request.getSession();
 %>
-  
-	<nav class="navbar navbar-expand-lg navbar-light fixed-top"
-		id="mainNav">
-		<div class="container">
-			<a class="navbar-brand" href="index.jsp">chachooon</a>
-			<button class="navbar-toggler navbar-toggler-right" type="button"
-				data-toggle="collapse" data-target="#navbarResponsive"
-				aria-controls="navbarResponsive" aria-expanded="false"
-				aria-label="Toggle navigation">
-				Menu <i class="fa fa-bars"></i>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item"><a class="nav-link" href="about.jsp">About</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="list.jsp">Portfolio</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="list.jsp">Post</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="list.jsp">Tag</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="contact.jsp">Contact</a>
-					</li>
-<!-- 					<li class="nav-item"><a class="nav-link" href="login.jsp">Sign in</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="register.jsp">Sign up</a>
-					</li> -->
-				</ul>
-			</div>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+	<div class="container">
+		<a class="navbar-brand" href="index.jsp">chachooon</a>
+		<button class="navbar-toggler navbar-toggler-right" type="button"
+			data-toggle="collapse" data-target="#navbarResponsive"
+			aria-controls="navbarResponsive" aria-expanded="false"
+			aria-label="Toggle navigation">
+			Menu <i class="fa fa-bars"></i>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+<!-- 			<li class="nav-item"><a class="nav-link" href="about.jsp">About</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="list.jsp">Portfolio</a>
+				</li> -->
+				<li class="nav-item"><a class="nav-link" href="/board/list.jsp">Board</a>
+				</li>
+<!-- 				<li class="nav-item"><a class="nav-link" href="list.jsp">Tag</a>
+				</li> -->
+				<li class="nav-item"><a class="nav-link" href="/contact.jsp">Contact</a>
+				</li>
+				<%
+					if (session.getAttribute("email") != null) {
+				%>
+				<li class="nav-item"><a class="nav-link" href="/logout.jsp"><%=session.getAttribute("name")%>님
+						[Logout]</a></li>
+				<%
+					} else {
+				%>
+				<li class="nav-item"><a class="nav-link" href="/login.jsp">Login</a>
+				</li>
+				<%
+					}
+				%>
+
+			</ul>
 		</div>
-	</nav>
+	</div>
+</nav>

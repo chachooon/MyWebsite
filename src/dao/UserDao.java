@@ -18,13 +18,12 @@ public class UserDao extends Dao {
 		return instance;
 	}
 
-	public int checkID(String userID) {
-		String query = "SELECT user_id, password FROM "+tableName+" WHERE USER_ID = ?";
+	public int checkID(String email) {
+		String query = "SELECT email, password FROM "+tableName+" WHERE email = ?";
 		int result = 0;
 		try {
 			pstmt = conn.prepareStatement(query); // Statement를 가져온다.
-//			pstmt.setString(1,tableName);
-			pstmt.setString(1,userID);
+			pstmt.setString(1,email);
 
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
@@ -43,15 +42,15 @@ public class UserDao extends Dao {
 
 	public User selectUser(String email) {
 		String query = "SELECT * FROM "+tableName+" WHERE EMAIL = ?";
-		System.out.println(query);
+		//"SELECT * FROM user_info WHERE EMAIL = 'admin@email.com'";
 		User user = new User();
 		try {
 			pstmt = conn.prepareStatement(query); // Statement를 가져온다.
-			pstmt.setString(1,email);			
+			pstmt.setString(1,email);
 			rs = pstmt.executeQuery();
+
 			if (rs.next()) {
-				user = new User(rs.getString("EMAIL"), rs.getString("PASSWORD"), rs.getString("NAME"));
-				System.out.println(user);
+				user = new User(rs.getString(1), rs.getString(2), rs.getString(3));
 			} else {
 				System.out.println("조회결과없음");
 			}
@@ -94,7 +93,7 @@ public class UserDao extends Dao {
 		} else if (checkID(user.getEmail()) != 0) {
 			System.out.println("이미 가입된 아이디 입니다.");
 		} else {
-			String query = "INSERT INTO "+tableName+"(USER_ID, NAME , PASSWORD, ,EMAIL) value(?,?,?,?)";
+			String query = "INSERT INTO "+tableName+"(EMAIL, NAME , PASSWORD) value(?,?,?)";
 			try {
 				pstmt = conn.prepareStatement(query);
 				pstmt.setString(1,user.getEmail());

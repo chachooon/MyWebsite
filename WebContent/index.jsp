@@ -54,7 +54,7 @@
 	<div class="container">
 		<div class="row">
 			<!-- 최근게시글 -->
-			<div class="col-lg-8 col-md-10 mx-auto">
+			<%-- <div class="col-lg-8 col-md-10 mx-auto">
 				<%for(int i=0; i<3; i++){%> 
 				<div class="post-preview">
 					<a href="post.html">
@@ -75,9 +75,9 @@
 					<a class="btn btn-secondary float-right" href="#">Older Posts &rarr;</a>
 				</div>
 			</div>
-			
+			 --%>
 			<!-- 최근방명록 -->
-			<div class="col-lg-8 col-md-10 mx-auto">
+			<%-- <div class="col-lg-8 col-md-10 mx-auto">
 				<%for(int i=0; i<2; i++){%> 
 				<div class="post-preview">
 					<a href="post.html">
@@ -94,7 +94,7 @@
 				<div class="clearfix">
 					<a class="btn btn-secondary float-right" href="#">Older Posts &rarr;</a>
 				</div>
-			</div>
+			</div> --%>
 		</div>
 	</div>
 

@@ -14,10 +14,10 @@
 <title>차정윤 :: Post List</title>
 
 <!-- Bootstrap core CSS -->
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom fonts for this template -->
-<link href="vendor/font-awesome/css/font-awesome.min.css"
+<link href="/vendor/font-awesome/css/font-awesome.min.css"
 	rel="stylesheet" type="text/css">
 <link
 	href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic'
@@ -27,17 +27,17 @@
 	rel='stylesheet' type='text/css'>
 
 <!-- Custom styles for this template -->
-<link href="css/clean-blog.min.css" rel="stylesheet">
+<link href="/css/clean-blog.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 	<!-- Navigation -->
-	<%@ include file="nav.jspf"%>
+	<%@ include file="/nav.jspf"%>
 
 	<!-- Page Header -->
 	<header class="masthead"
-		style="background-image: url('img/home-bg.jpg')">
+		style="background-image: url('/img/home-bg.jpg')">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-md-10 mx-auto">
@@ -69,7 +69,7 @@
 					</p>
 				</div>
 				<hr>
-				<%} %>
+				<% } %>
 				<!-- Pager -->
 				<div class="clearfix">
 					<a class="btn btn-secondary float-right" href="#">Older Posts &rarr;</a>
@@ -81,15 +81,15 @@
 	<hr>
 
 	<!-- Footer -->
-	<%@ include file="footer.jspf"%>
+	<%@ include file="/footer.jspf"%>
 
 	<!-- Bootstrap core JavaScript -->
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor/popper/popper.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/vendor/jquery/jquery.min.js"></script>
+	<script src="/vendor/popper/popper.min.js"></script>
+	<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 
 	<!-- Custom scripts for this template -->
-	<script src="js/clean-blog.min.js"></script>
+	<script src="/js/clean-blog.min.js"></script>
 
 </body>
 
